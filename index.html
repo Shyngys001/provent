@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <!-- SEO and Open Graph Tags -->
+  <title>PROVENT | Digital Marketing Agency</title>
+  <meta name="description" content="Provent - A Dubai-based digital marketing agency offering advanced SMM, PR, and AI analytics. Boost your business growth with us.">
+  <meta name="keywords" content="digital marketing, SMM, PR, AI, analytics, dubai, Provent">
+  <meta property="og:title" content="PROVENT | Digital Marketing Agency">
+  <meta property="og:description" content="Provent - A Dubai-based digital marketing agency offering advanced SMM, PR, and AI analytics. Boost your business growth with us.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=PROVENT">
+  <meta property="og:url" content="https://example.com">
+  <meta property="og:type" content="website">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #0A0A0A;
+      --secondary: #FFFFFF;
+      --accent: #C5A46D;
+      --text: #3D3D3D;
+      --section-padding: 100px;
+      --border-radius: 16px;
+      --shadow: 0 12px 24px rgba(0,0,0,0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    [dir="rtl"] * {
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    body {
+      background: var(--secondary);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ---------------- HEADER ---------------- */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1.5rem 5%;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: var(--shadow);
+      transition: 0.3s ease;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      position: relative;
+    }
+
+    .logo::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 40%;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .navbar {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: var(--accent);
+    }
+
+    /* Language Switch */
+    .lang-switcher {
+      display: flex;
+      gap: 12px;
+      margin-left: 2rem;
+    }
+
+    .lang-btn {
+      background: none;
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 8px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: var(--secondary);
+    }
+
+    /* ---------------- BURGER / SIDEBAR ---------------- */
+    .burger-icon {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .burger-icon span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      max-width: 280px;
+      height: 100vh;
+      background: var(--secondary);
+      box-shadow: -3px 0 24px rgba(0,0,0,0.1);
+      padding: 80px 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      transition: 0.4s ease;
+      z-index: 2000;
+    }
+
+    .sidebar.open {
+      right: 0;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    .close-sidebar {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* ---------------- HERO SECTION ---------------- */
+    .hero {
+      padding: 160px 5% 100px;
+      text-align: center;
+      background: linear-gradient(45deg, rgba(197,164,109,0.1) 0%, rgba(255,255,255,1) 100%);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      max-width: 800px;
+      margin: 0 auto 1rem auto;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    /* CTA BLOCK */
+    .cta-block {
+      background: var(--accent);
+      color: var(--secondary);
+      text-align: center;
+      padding: 2rem;
+      margin: 2rem 5%;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-block h2 {
+      margin-bottom: 1rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--secondary);
+      color: var(--accent);
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      margin-top: 1rem;
+    }
+
+    .cta-btn:hover {
+      background: #e2c694;
+    }
+
+    /* ---------------- WHY US ---------------- */
+    .why-us {
+      padding: var(--section-padding) 5%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      align-items: center;
+    }
+
+    .why-us-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .why-us-content h2 {
+      font-size: 2rem;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .why-us-img {
+      text-align: center;
+    }
+
+    .why-us-img img {
+      max-width: 100%;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+
+    .why-us-list {
+      list-style: none;
+      margin-left: 1rem;
+    }
+
+    .why-us-list li {
+      margin-bottom: 0.8rem;
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .why-us-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* ---------------- COUNTERS (STATS) ---------------- */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: var(--section-padding) 5%;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      text-align: center;
+      min-width: 150px;
+    }
+
+    .stat-item .counter {
+      font-size: 2.5rem;
+      color: var(--accent);
+      font-weight: 700;
+      display: block;
+    }
+
+    .stat-item span {
+      font-weight: 500;
+    }
+
+    /* ---------------- SERVICES SECTION ---------------- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: var(--section-padding) 5%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      margin: 10px auto 0;
+    }
+
+    .service-card {
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      background: var(--secondary);
+      box-shadow: var(--shadow);
+      transition: 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-card i {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    /* ---------------- PROJECTS SECTION ---------------- */
+    .projects {
+      padding: var(--section-padding) 5%;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .project-item {
+      background: var(--secondary);
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      transition: 0.3s ease;
+      text-align: center;
+    }
+
+    .project-item:hover {
+      transform: translateY(-10px);
+    }
+
+    /* ---------------- TESTIMONIALS ---------------- */
+    .testimonials {
+      padding: var(--section-padding) 5%;
+      background: rgba(0,0,0,0.02);
+    }
+
+    .testimonial-item {
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      max-width: 600px;
+      margin: 1rem auto;
+      position: relative;
+    }
+
+    .testimonial-item .quote-icon {
+      font-size: 2rem;
+      color: var(--accent);
+      position: absolute;
+      top: 16px;
+      left: 16px;
+    }
+
+    .testimonial-author {
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    /* ---------------- TEAM SECTION ---------------- */
+    .team {
+      padding: var(--section-padding) 5%;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .team-member {
+      text-align: center;
+      transition: 0.3s;
+      background: var(--secondary);
+      box-shadow: var(--shadow);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      border: 1px solid rgba(0,0,0,0.08);
+      max-width: 220px;
+    }
+
+    .team-member:hover {
+      transform: translateY(-6px);
+    }
+
+    .team-member img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .team-member h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---------------- FAQ SECTION ---------------- */
+    .faq {
+      padding: var(--section-padding) 5%;
+    }
+
+    .faq-item {
+      background: var(--secondary);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 1rem;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .faq-question {
+      cursor: pointer;
+      padding: 1rem 1.5rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s;
+    }
+
+    .faq-question:hover {
+      background: rgba(0,0,0,0.05);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 1.5rem 1rem;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* ---------------- CONTACT SECTION ---------------- */
+    .contact {
+      padding: var(--section-padding) 5%;
+      background: rgba(0,0,0,0.02);
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--secondary);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 8px;
+      transition: 0.3s ease;
+      font: inherit;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(197,164,109,0.2);
+    }
+
+    button[type="submit"] {
+      background: var(--accent);
+      color: var(--secondary);
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background: #b29563;
+    }
+
+    /* ---------------- MAP SECTION ---------------- */
+    .map-section {
+      padding: var(--section-padding) 5%;
+      text-align: center;
+    }
+
+    .map-section iframe {
+      width: 100%;
+      max-width: 1000px;
+      height: 450px;
+      border: none;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer {
+      padding: 1.5rem 5%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      background: var(--secondary);
+      border-top: 1px solid rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    /* Соцсети в футере */
+    .social-links {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .social-links a {
+      color: var(--text);
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--accent);
+      color: var(--secondary);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+      z-index: 9999;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Animations */
+    .hidden {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.8s ease;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------------- MEDIA QUERIES ---------------- */
+    @media (max-width: 1024px) {
+      .navbar {
+        display: none; /* Скрываем главное меню */
+      }
+      .burger-icon {
+        display: flex; /* Показываем иконку бургера */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        padding: 1rem 5%;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .why-us {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">PROVENT</div>
+    <nav class="navbar">
+      <a href="#why-us" data-en="Why Us" data-ru="Почему мы" data-ar="لماذا نحن">Why Us</a>
+      <a href="#services" data-en="Services" data-ru="Услуги" data-ar="الخدمات">Services</a>
+      <a href="#projects" data-en="Projects" data-ru="Проекты" data-ar="المشاريع">Projects</a>
+      <a href="#team" data-en="Team" data-ru="Команда" data-ar="الفريق">Team</a>
+      <a href="#faq" data-en="FAQ" data-ru="Вопросы" data-ar="الأسئلة الشائعة">FAQ</a>
+      <a href="#contact" data-en="Contact" data-ru="Контакты" data-ar="اتصل بنا">Contact</a>
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('ar')">عربي</button>
+        <button class="lang-btn" onclick="setLang('ru')">RU</button>
+      </div>
+    </nav>
+
+    <!-- Иконка бургера (мобильное меню) -->
+    <div class="burger-icon" id="burgerBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Сайдбар (выезжающее мобильное меню) -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-sidebar" id="closeSidebar">✕</button>
+    <a href="#why-us" onclick="closeSidebar()" data-en="Why Us" data-ru="Почему мы" data-ar="لماذا نحن">Why Us</a>
+    <a href="#services" onclick="closeSidebar()" data-en="Services" data-ru="Услуги" data-ar="الخدمات">Services</a>
+    <a href="#projects" onclick="closeSidebar()" data-en="Projects" data-ru="Проекты" data-ar="المشاريع">Projects</a>
+    <a href="#team" onclick="closeSidebar()" data-en="Team" data-ru="Команда" data-ar="الفريق">Team</a>
+    <a href="#faq" onclick="closeSidebar()" data-en="FAQ" data-ru="Вопросы" data-ar="الأسئلة الشائعة">FAQ</a>
+    <a href="#contact" onclick="closeSidebar()" data-en="Contact" data-ru="Контакты" data-ar="اتصل بنا">Contact</a>
+    <div class="lang-switcher" style="margin-top: 2rem;">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ar')">عربي</button>
+      <button class="lang-btn" onclick="setLang('ru')">RU</button>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero hidden" id="hero">
+    <h1 data-en="Transform Your Digital Presence" 
+        data-ar="طور وجودك الرقمي"
+        data-ru="Преобразите Ваше цифровое присутствие">
+      Transform Your Digital Presence
+    </h1>
+    <p data-en="Dubai-based marketing agency driving growth through innovation"
+       data-ar="وكالة تسويقية مقرها دبي تعمل على دفع النمو من خلال الابتكار"
+       data-ru="Дубайское маркетинговое агентство, стимулирующее рост через инновации">
+      Dubai-based marketing agency driving growth through innovation
+    </p>
+  </section>
+
+  <!-- CTA BLOCK -->
+  <div class="cta-block hidden">
+    <h2 data-en="Ready to Boost Your Business?" 
+        data-ar="هل أنت مستعد لدفع عملك نحو الأمام؟"
+        data-ru="Готовы вывести бизнес на новый уровень?">
+      Ready to Boost Your Business?
+    </h2>
+    <p data-en="Get a free consultation and find out how we can help."
+       data-ar="احصل على استشارة مجانية واكتشف كيف يمكننا المساعدة."
+       data-ru="Получите бесплатную консультацию и узнайте, как мы можем помочь.">
+      Get a free consultation and find out how we can help.
+    </p>
+    <a href="#contact" class="cta-btn" data-en="Contact Us" data-ar="اتصل بنا" data-ru="Связаться с нами">Contact Us</a>
+  </div>
+
+  <!-- WHY US SECTION -->
+  <section class="why-us hidden" id="why-us">
+    <div class="why-us-img">
+      <img src="https://www.girleffect.org/static/assets/images/hero_image.png" alt="Why Us Image">
+    </div>
+    <div class="why-us-content">
+      <h2 data-en="Why Choose PROVENT"
+          data-ar="لماذا تختار PROVENT"
+          data-ru="Почему выбирают PROVENT">
+        Why Choose PROVENT
+      </h2>
+      <ul class="why-us-list">
+        <li data-en="Over 5 years of global marketing experience"
+            data-ar="أكثر من 5 سنوات من الخبرة العالمية في التسويق"
+            data-ru="Более 5 лет международного опыта в маркетинге">
+          Over 5 years of global marketing experience
+        </li>
+        <li data-en="Team of AI, SMM, and PR experts"
+            data-ar="فريق من خبراء الذكاء الاصطناعي والتسويق الاجتماعي والعلاقات العامة"
+            data-ru="Команда специалистов по ИИ, SMM и PR">
+          Team of AI, SMM, and PR experts
+        </li>
+        <li data-en="Proven track record with top brands"
+            data-ar="سجل حافل بالنجاح مع أبرز العلامات التجارية"
+            data-ru="Успешный опыт работы с ведущими брендами">
+          Proven track record with top brands
+        </li>
+        <li data-en="Data-driven, innovative solutions"
+            data-ar="حلول مبتكرة قائمة على البيانات"
+            data-ru="Инновационные решения на основе данных">
+          Data-driven, innovative solutions
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COUNTERS (STATS) -->
+  <section class="stats hidden">
+    <div class="stat-item">
+      <span class="counter" data-target="150">0</span>
+      <span data-en="Projects" data-ar="مشروع" data-ru="Проектов">Projects</span>
+    </div>
+    <div class="stat-item">
+      <span class="counter" data-target="50">0</span>
+      <span data-en="Happy Clients" data-ar="عملاء سعداء" data-ru="Довольных клиентов">Happy Clients</span>
+    </div>
+    <div class="stat-item">
+      <span class="counter" data-target="10">0</span>
+      <span data-en="Countries" data-ar="دول" data-ru="Стран">Countries</span>
+    </div>
+    <div class="stat-item">
+      <span class="counter" data-target="5">0</span>
+      <span data-en="Years of Experience" data-ar="سنوات من الخبرة" data-ru="Лет опыта">Years of Experience</span>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services-grid" id="services">
+    <h2 class="section-title hidden" data-en="Our Services" data-ru="Наши Услуги" data-ar="خدماتنا">Our Services</h2>
+
+    <div class="service-card hidden">
+      <i class="fas fa-rocket fa-2x"></i>
+      <h3 data-en="Digital Strategy" 
+          data-ar="استراتيجية رقمية"
+          data-ru="Цифровая стратегия">
+        Digital Strategy
+      </h3>
+      <p data-en="Comprehensive market analysis and growth planning"
+         data-ar="تحليل سوق شامل وتخطيط النمو"
+         data-ru="Комплексный анализ рынка и планирование роста">
+        Comprehensive market analysis and growth planning
+      </p>
+    </div>
+
+    <div class="service-card hidden">
+      <i class="fas fa-chart-line fa-2x"></i>
+      <h3 data-en="SMM & PR" 
+          data-ar="التسويق عبر الشبكات الاجتماعية والعلاقات العامة"
+          data-ru="SMM и PR">
+        SMM & PR
+      </h3>
+      <p data-en="Social Media Management, Influencer Outreach, and Brand Building"
+         data-ar="إدارة وسائل التواصل الاجتماعي، التواصل مع المؤثرين، وبناء العلامة التجارية"
+         data-ru="Управление соцсетями, работа с блогерами и развитие бренда">
+        Social Media Management, Influencer Outreach, and Brand Building
+      </p>
+    </div>
+
+    <div class="service-card hidden">
+      <i class="fas fa-chart-pie fa-2x"></i>
+      <h3 data-en="Analytics & AI"
+          data-ar="التحليلات والذكاء الاصطناعي"
+          data-ru="Аналитика и ИИ">
+        Analytics & AI
+      </h3>
+      <p data-en="Data-driven insights and chatbot solutions for automated support"
+         data-ar="رؤى تعتمد على البيانات وحلول الروبوتات للمحادثة للدعم الآلي"
+         data-ru="Решения на базе данных и чат-боты для автоматизации поддержки">
+        Data-driven insights and chatbot solutions for automated support
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="projects" id="projects">
+    <h2 class="section-title hidden"
+        data-en="Our Projects"
+        data-ar="مشاريعنا"
+        data-ru="Наши проекты">
+      Our Projects
+    </h2>
+    <div class="projects-grid">
+      <div class="project-item hidden">
+        <h3 data-en="AYKUN Hotels" data-ar="فنادق أيكون" data-ru="AYKUN Hotels">AYKUN Hotels</h3>
+        <p data-en="Luxury hospitality marketing campaign" 
+           data-ar="حملة تسويقية للضيافة الفاخرة"
+           data-ru="Рекламная кампания для люксового отеля">
+           Luxury hospitality marketing campaign
+        </p>
+      </div>
+      <div class="project-item hidden">
+        <h3 data-en="Energetika Alemi" data-ar="عالم الطاقة" data-ru="Energetika Alemi">Energetika Alemi</h3>
+        <p data-en="SMM & PR for renewable energy brand" 
+           data-ar="إدارة وسائل التواصل والعلاقات العامة لشركة طاقة متجددة"
+           data-ru="SMM и PR для компании в сфере возобновляемой энергии">
+           SMM & PR for renewable energy brand
+        </p>
+      </div>
+      <div class="project-item hidden">
+        <h3 data-en="NUR-ALIKHAN Academy" data-ar="أكاديمية نور-عليخان" data-ru="NUR-ALIKHAN Academy">NUR-ALIKHAN Academy</h3>
+        <p data-en="Education platform with AI-assisted analytics" 
+           data-ar="منصة تعليمية مع تحليلات بالذكاء الاصطناعي"
+           data-ru="Образовательная платформа с ИИ-аналитикой">
+           Education platform with AI-assisted analytics
+        </p>
+      </div>
+      <div class="project-item hidden">
+        <h3 data-en="QAZAN PLOV Restaurant" data-ar="مطعم قازان بلوف" data-ru="QAZAN PLOV Restaurant">QAZAN PLOV Restaurant</h3>
+        <p data-en="Branding and social media growth" 
+           data-ar="العلامة التجارية وتنمية وسائل التواصل الاجتماعي"
+           data-ru="Развитие бренда и соцсетей">
+           Branding and social media growth
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="testimonials hidden" id="testimonials">
+    <h2 class="section-title" 
+        data-en="Testimonials"
+        data-ar="آراء العملاء"
+        data-ru="Отзывы">
+      Testimonials
+    </h2>
+
+    <div class="testimonial-item hidden">
+      <i class="fa-solid fa-quote-left quote-icon"></i>
+      <p data-en="PROVENT helped our hotel chain significantly boost online visibility and direct bookings."
+         data-ar="ساعدتنا PROVENT على زيادة الظهور عبر الإنترنت وحجوزات الفنادق بشكل كبير."
+         data-ru="С PROVENT мы смогли заметно увеличить онлайн-присутствие и прямые бронирования в наших отелях.">
+         PROVENT helped our hotel chain significantly boost online visibility and direct bookings.
+      </p>
+      <p class="testimonial-author" data-en="– John, AYKUN Hotels"
+         data-ar="– جون، فنادق أيكون"
+         data-ru="– Джон, AYKUN Hotels">
+         – John, AYKUN Hotels
+      </p>
+    </div>
+
+    <div class="testimonial-item hidden">
+      <i class="fa-solid fa-quote-left quote-icon"></i>
+      <p data-en="Their AI chatbot solutions saved us time and allowed better engagement with our online audience."
+         data-ar="وفرت لنا حلول روبوتات الدردشة بالذكاء الاصطناعي الكثير من الوقت وحسنت تفاعلنا مع الجمهور."
+         data-ru="ИИ-чат-боты от PROVENT сэкономили нам время и помогли лучше взаимодействовать с аудиторией.">
+         Their AI chatbot solutions saved us time and allowed better engagement with our online audience.
+      </p>
+      <p class="testimonial-author" data-en="– Aigerim, Energetika Alemi"
+         data-ar="– عائشة، عالم الطاقة"
+         data-ru="– Айгерим, Energetika Alemi">
+         – Aigerim, Energetika Alemi
+      </p>
+    </div>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section class="team" id="team">
+    <h2 class="section-title hidden" 
+        data-en="Our Team" 
+        data-ar="فريقنا" 
+        data-ru="Наша команда">
+      Our Team
+    </h2>
+    <div class="team-grid">
+      <div class="team-member hidden">
+        <img src="https://www.girleffect.org/static/assets/images/hero_image.png" alt="Azamat">
+        <h4 data-en="AZAMAT – CEO" data-ar="عزامات - الرئيس التنفيذي" data-ru="АЗАМАТ – Ген. директор">AZAMAT – CEO</h4>
+        <p data-en="Guiding the agency's strategic vision" 
+           data-ar="يوجه الرؤية الاستراتيجية للوكالة"
+           data-ru="Определяет стратегическое видение агентства">
+           Guiding the agency's strategic vision
+        </p>
+      </div>
+      <div class="team-member hidden">
+        <img src="https://www.girleffect.org/static/assets/images/hero_image.png" alt="Artur">
+        <h4 data-en="ARTUR – PR Manager" data-ar="أرتور - مدير العلاقات العامة" data-ru="АРТУР – PR-менеджер">ARTUR – PR Manager</h4>
+        <p data-en="Media relations and brand positioning"
+           data-ar="العلاقات الإعلامية وتحديد مكانة العلامة التجارية"
+           data-ru="Работа со СМИ и позиционирование бренда">
+           Media relations and brand positioning
+        </p>
+      </div>
+      <div class="team-member hidden">
+        <img src="https://www.girleffect.org/static/assets/images/hero_image.png" alt="Fariza">
+        <h4 data-en="FARIZA – SMM" data-ar="فاريزا - إدارة الشبكات الاجتماعية" data-ru="ФАРИЗА – SMM">FARIZA – SMM</h4>
+        <p data-en="Social content, engagement strategies"
+           data-ar="المحتوى الاجتماعي واستراتيجيات التفاعل"
+           data-ru="Контент в соцсетях, повышение вовлеченности">
+           Social content, engagement strategies
+        </p>
+      </div>
+      <div class="team-member hidden">
+        <img src="https://www.girleffect.org/static/assets/images/hero_image.png" alt="Shyngyss">
+        <h4 data-en="SHYNGYSS – AI Specialist" data-ar="شنغيس - متخصص الذكاء الاصطناعي" data-ru="ШЫНГЫСС – Специалист по ИИ">SHYNGYSS – AI Specialist</h4>
+        <p data-en="AI integrations and chatbot development"
+           data-ar="تكامل الذكاء الاصطناعي وتطوير روبوتات الدردشة"
+           data-ru="Внедрение ИИ и разработка чат-ботов">
+           AI integrations and chatbot development
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq" id="faq">
+    <h2 class="section-title hidden"
+        data-en="Frequently Asked Questions"
+        data-ar="أسئلة مكررة"
+        data-ru="Часто задаваемые вопросы">
+      Frequently Asked Questions
+    </h2>
+
+    <div class="faq-item hidden">
+      <div class="faq-question">
+        <span data-en="How long does a typical project take?"
+              data-ar="كم يستغرق المشروع عادة؟"
+              data-ru="Сколько длится типичный проект?">
+          How long does a typical project take?
+        </span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <p data-en="It depends on the scope, but most campaigns span 3-6 months for tangible results."
+           data-ar="يعتمد على حجم المشروع، لكن معظم الحملات تستمر من 3 إلى 6 أشهر للحصول على نتائج ملموسة."
+           data-ru="Зависит от масштаба; обычно кампании занимают от 3 до 6 месяцев для ощутимого результата.">
+          It depends on the scope, but most campaigns span 3-6 months for tangible results.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item hidden">
+      <div class="faq-question">
+        <span data-en="Do you work with international clients?"
+              data-ar="هل تعملون مع عملاء دوليين؟"
+              data-ru="Работаете ли вы с международными клиентами?">
+          Do you work with international clients?
+        </span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <p data-en="Yes, we have experience in several countries and can manage campaigns globally."
+           data-ar="نعم، لدينا خبرة في عدة دول ويمكننا إدارة الحملات دولياً."
+           data-ru="Да, у нас есть опыт работы в разных странах, мы можем вести кампании по всему миру.">
+          Yes, we have experience in several countries and can manage campaigns globally.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <h2 class="section-title hidden"
+        data-en="Get in Touch"
+        data-ar="تواصل معنا"
+        data-ru="Свяжитесь с нами">
+      Get in Touch
+    </h2>
+
+    <form class="contact-form hidden">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="text" placeholder="Company (optional)" />
+      <input type="text" placeholder="Your Marketing Goals" />
+      <input type="tel" placeholder="Phone Number" />
+      <textarea placeholder="Message" rows="5"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- MAP SECTION -->
+  <section class="map-section hidden" id="map">
+    <h2 class="section-title" data-en="Find Us" data-ar="أين تجدنا" data-ru="Как нас найти">Find Us</h2>
+    <!-- Пример. В реальном проекте укажите свой src/ключ API, если нужно. -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.6233632084688!2d55.27218751501096!3d25.19719798390078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43201f6baa89%3A0x1a5468963662c507!2sDubai!5e0!3m2!1sen!2sae!4v1667734667675!5m2!1sen!2sae"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="social-links">
+      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+    </div>
+    © 2025 PROVENT Agency · All Rights Reserved
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fa-solid fa-arrow-up"></i>
+  </div>
+
+  <script>
+    // === Language Switch Function ===
+    function setLang(lang) {
+      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+
+      // RTL переключаем для арабского
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.lang = lang;
+
+      // Активная кнопка
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.textContent.trim().toUpperCase() === lang.toUpperCase()) {
+          btn.classList.add('active');
+        }
+        if (lang === 'ar' && btn.textContent.includes('عربي')) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    // === Burger Menu Logic ===
+    const burgerBtn = document.getElementById('burgerBtn');
+    const sidebar = document.getElementById('sidebar');
+    const closeSidebarBtn = document.getElementById('closeSidebar');
+
+    burgerBtn.addEventListener('click', () => {
+      sidebar.classList.add('open');
+    });
+    closeSidebarBtn.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+    });
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+    }
+
+    // === Scroll Animations (Intersection Observer) ===
+    const hiddenElems = document.querySelectorAll('.hidden');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    hiddenElems.forEach(el => observer.observe(el));
+
+    // === Counters (Stats) ===
+    const counters = document.querySelectorAll('.counter');
+    let countersStarted = false;
+
+    function runCounters() {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const step = target / 100; // грубый шаг (можно усложнить)
+        let current = 0;
+
+        const updateCounter = () => {
+          if (current < target) {
+            current += step;
+            counter.textContent = Math.ceil(current);
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.textContent = target;
+          }
+        };
+        updateCounter();
+      });
+    }
+
+    const statsSection = document.querySelector('.stats');
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !countersStarted) {
+          countersStarted = true;
+          runCounters();
+        }
+      });
+    }, { threshold: 0.3 });
+    statsObserver.observe(statsSection);
+
+    // === FAQ Accordion ===
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+
+    // === Back to Top ===
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // === Default Language ===
+    window.addEventListener('DOMContentLoaded', () => {
+      setLang('en');
+    });
+  </script>
+</body>
+</html>
