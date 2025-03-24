@@ -983,20 +983,17 @@
 
   <!-- CONTACT SECTION -->
   <section class="contact" id="contact">
-    <h2 class="section-title hidden"
-        data-en="Get in Touch"
-        data-ar="تواصل معنا"
-        data-ru="Свяжитесь с нами">
+    <h2 class="section-title" data-en="Get in Touch" data-ar="تواصل معنا" data-ru="Свяжитесь с нами">
       Get in Touch
     </h2>
-
-    <form class="contact-form hidden">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <input type="text" placeholder="Company (optional)" />
-      <input type="text" placeholder="Your Marketing Goals" />
-      <input type="tel" placeholder="Phone Number" />
-      <textarea placeholder="Message" rows="5"></textarea>
+    <!-- Форма с id для JS -->
+    <form class="contact-form" id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="company" placeholder="Company (optional)" />
+      <input type="text" name="goals" placeholder="Your Marketing Goals" />
+      <input type="tel" name="phone" placeholder="Phone Number" />
+      <textarea name="message" placeholder="Message" rows="5"></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
@@ -1139,6 +1136,34 @@
     // === Default Language ===
     window.addEventListener('DOMContentLoaded', () => {
       setLang('en');
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Отменяем стандартное поведение отправки
+
+      // Формируем объект FormData из формы
+      var formData = new FormData(e.target);
+
+      // Выполняем fetch-запрос к Web App URL (замените URL на свой)
+      fetch("https://script.google.com/macros/s/AKfycbyX9JWzQ1KONDY9QXyLvMk937WwmYaBMDIQoq-FlV_ZmaVAb91QjLLs3jDjNHNO7hYn/exec", {
+          method: "POST",
+          body: formData
+      })
+      .then(function(response) {
+          return response.json();
+      })
+      .then(function(data) {
+          if(data.status === "success") {
+              // Показываем сообщение об успешной отправке
+              alert("Форма успешно записана");
+              e.target.reset(); // очищаем поля формы
+          } else {
+              alert("Ошибка: " + data.message);
+          }
+      })
+      .catch(function(error) {
+          alert("Ошибка отправки формы: " + error);
+      });
     });
   </script>
 </body>
