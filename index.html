@@ -21,7 +21,7 @@
     :root {
       --primary: #0A0A0A;
       --secondary: #FFFFFF;
-      --accent: #C5A46D;
+      --accent: #775FE1;
       --text: #3D3D3D;
       --section-padding: 100px;
       --border-radius: 16px;
@@ -63,15 +63,21 @@
       transition: 0.3s ease;
     }
 
-    .logo {
+    /* .logo {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
       font-weight: 600;
       color: var(--primary);
       position: relative;
-    }
+    } */
 
-    .logo::after {
+    .logo_img {
+  width: 150px;
+  background-color: #fff;
+  display: inline-block;
+}
+
+    /* .logo::after {
       content: '';
       position: absolute;
       bottom: -6px;
@@ -79,7 +85,7 @@
       width: 40%;
       height: 2px;
       background: var(--accent);
-    }
+    } */
 
     /* Desktop Navbar */
     .navbar {
@@ -641,7 +647,7 @@
 <body>
   <!-- HEADER -->
   <header class="header">
-    <div class="logo">PROVENT</div>
+    <div class="logo"> <img class="logo_img" src="logo.png" alt=""></div>
     <!-- Desktop Navbar -->
     <nav class="navbar">
       <a href="#why-us" data-en="Why Us" data-ru="Почему мы" data-ar="لماذا نحن">Why Us</a>
@@ -887,110 +893,114 @@
   </section>
 
   <!-- TEAM SECTION SLIDER -->
-  <section class="team" id="team-slider">
-    <h2 class="section-title hidden" data-en="Our Team" data-ar="فريقنا" data-ru="Наша команда">
-      Our Team
-    </h2>
-    <div class="team-slider-container">
-      <button class="slider-btn prev">&#10094;</button>
-      <div class="team-slider">
-        <div class="team-slide">
-          <div class="team-member">
-            <img src="team/aza.png" alt="Azamat">
-            <h5 data-en="AZAMAT MURATOVICH – CEO" data-ar="عزامات - الرئيس التنفيذي" data-ru="АЗАМАТ Муратович – Ген. директор">
-              AZAMAT Муратович – CEO
-            </h5>
-            <p data-en="Guiding the agency's strategic vision" data-ar="يوجه الرؤية الاستراتيجية للوكالة" data-ru="Определяет стратегическое видение агентства">
-              Guiding the agency's strategic vision
-            </p>
-          </div>
+  <!-- TEAM SECTION SLIDER (Arabic) -->
+<section class="team" id="team-slider">
+  <h2 class="section-title hidden" data-en="Our Team" data-ar="فريقنا" data-ru="Наша команда">
+    فريقنا
+  </h2>
+  <div class="team-slider-container">
+    <button class="slider-btn prev">&#10094;</button>
+    <div class="team-slider">
+      <!-- Slide 1: أزامات موراتوفيتش – الرئيس التنفيذي لشركة بروفنت -->
+      <div class="team-slide">
+        <div class="team-member">
+          <img src="team/aza.png" alt="Azamat">
+          <h5 data-en="Azamat Muratovich – CEO Provent" data-ar="أزامات موراتوفيتش – الرئيس التنفيذي لشركة بروفنت" data-ru="Азамат Муратович – CEO Provent">
+            أزامات موراتوفيتش – الرئيس التنفيذي لشركة بروفنت
+          </h5>
+          <p data-en="Guiding the agency's strategic vision" data-ar="قيادة الرؤية الاستراتيجية للوكالة" data-ru="Определяет стратегическое видение агентства">
+            قيادة الرؤية الاستراتيجية للوكالة
+          </p>
         </div>
-        <div class="team-slide">
-          <div class="team-member">
-            <img src="https://www.girleffect.org/static/assets/images/hero_image.png" alt="Artur">
-            <h5 data-en="ARTUR – PR Manager" data-ar="أرتور - مدير العلاقات العامة" data-ru="АРТУР – PR-менеджер">
-              ARTUR – PR Manager
-            </h5>
-            <p data-en="Media relations and brand positioning" data-ar="العلاقات الإعلامية وتحديد مكانة العلامة التجارية" data-ru="Работа со СМИ и позиционирование бренда">
-              Media relations and brand positioning
-            </p>
-          </div>
-        </div>
-        <div class="team-slide">
-          <div class="team-member">
-            <img src="team/fariza.png" alt="Fariza">
-            <h5 data-en="FARIZA – SMM" data-ar="فاريزا - إدارة الشبكات الاجتماعية" data-ru="ФАРИЗА – SMM">
-              FARIZA – SMM
-            </h5>
-            <p data-en="Social content, engagement strategies" data-ar="المحتوى الاجتماعي واستراتيجيات التفاعل" data-ru="Контент в соцсетях, повышение вовлеченности">
-              Social content, engagement strategies
-            </p>
-          </div>
-        </div>
-        <div class="team-slide">
-          <div class="team-member">
-            <img src="team/shyn.png" alt="Shyngyss">
-            <h5 data-en="SHYNGYSS – AI/IT Specialist" data-ar="شنغيس - متخصص الذكاء الاصطناعي" data-ru="ШЫНГЫС – Специалист по AI/IT">
-              SHYNGYSS – AI/IT Specialist
-            </h5>
-            <p data-en="AI integrations and IT/chatbot development" data-ar="تكامل الذكاء الاصطناعي وتطوير روبوتات الدردشة" data-ru="Внедрение ИИ и разработка IT/chatbot">
-              AI integrations and IT/chatbot development
-            </p>
-          </div>
-        </div>
-
-        <div class="team-slide">
-          <div class="team-member">
-            <img src="team/aru.png" alt="Aruzhan">
-            <h5 data-en="SHYNGYSS – AI/IT Specialist" data-ar="شنغيس - متخصص الذكاء الاصطناعي" data-ru="ШЫНГЫС – Специалист по AI/IT">
-              SHYNGYSS – AI/IT Specialist
-            </h5>
-            <p data-en="AI integrations and IT/chatbot development" data-ar="تكامل الذكاء الاصطناعي وتطوير روبوتات الدردشة" data-ru="Внедрение ИИ и разработка IT/chatbot">
-              AI integrations and IT/chatbot development
-            </p>
-          </div>
-        </div>
-
-        <div class="team-slide">
-          <div class="team-member">
-            <img src="team/arman.png" alt="Shyngyss">
-            <h5 data-en="Kassenov Arman – director" data-ar="شنغيس - متخصص الذكاء الاصطناعي" data-ru="ШЫНГЫС – Специалист по AI/IT">
-              Kassenov Arman – director
-            </h5>
-            <p data-en="AI integrations and IT/chatbot development" data-ar="تكامل الذكاء الاصطناعي وتطوير روبوتات الدردشة" data-ru="Внедрение ИИ и разработка IT/chatbot">
-              AI integrations and IT/chatbot development
-            </p>
-          </div>
-        </div>
-
-        <div class="team-slide">
-          <div class="team-member">
-            <img src="team/ainura.png" alt="Shyngyss">
-            <h5 data-en="SHYNGYSS – AI/IT Specialist" data-ar="شنغيس - متخصص الذكاء الاصطناعي" data-ru="АЙНУРА – Таргетолог дизайнер">
-              SHYNGYSS – AI/IT Specialist
-            </h5>
-            <p data-en="AI integrations and IT/chatbot development" data-ar="تكامل الذكاء الاصطناعي وتطوير روبوتات الدردشة" data-ru="Внедрение ИИ и разработка IT/chatbot">
-              AI integrations and IT/chatbot development
-            </p>
-          </div>
-        </div>
-
-        <div class="team-slide">
-          <div class="team-member">
-            <img src="team/batyr.png" alt="Shyngyss">
-            <h5 data-en="SHYNGYSS – AI/IT Specialist" data-ar="شنغيس - متخصص الذكاء الاصطناعي" data-ru="Батырхан - Контент продюсер">
-              SHYNGYSS – AI/IT Specialist
-            </h5>
-            <p data-en="AI integrations and IT/chatbot development" data-ar="تكامل الذكاء الاصطناعي وتطوير روبوتات الدردشة" data-ru="Внедрение ИИ и разработка IT/chatbot">
-              AI integrations and IT/chatbot development
-            </p>
-          </div>
-        </div>
-        <!-- Дополнительные слайды при необходимости -->
       </div>
-      <button class="slider-btn next">&#10095;</button>
+      <!-- Slide 2: عليولي أليشَر – منشئ محتوى/مصور فيديو -->
+      <div class="team-slide">
+        <div class="team-member">
+          <img src="team/alish.png" alt="Aliuly Alisher">
+          <h5 data-en="Aliuly Alisher – Content Creator/Videographer" data-ar="عليولي أليشَر – منشئ محتوى/مصور فيديو" data-ru="Алиұлы Алишер – Контент Креатор/Видеограф">
+            عليولي أليشَر – منشئ محتوى/مصور فيديو
+          </h5>
+          <p data-en="Creating engaging video content" data-ar="إنشاء محتوى فيديو جذاب" data-ru="Создание привлекательного видеоконтента">
+            إنشاء محتوى فيديو جذاب
+          </p>
+        </div>
+      </div>
+      <!-- Slide 3: إلنار إرشات – مصور فيديو/منشئ محتوى -->
+      <div class="team-slide">
+        <div class="team-member">
+          <img src="team/elnar.png" alt="Elnar Ershat">
+          <h5 data-en="Elnar Ershat – Videographer/Content Creator" data-ar="إلنار إرشات – مصور فيديو/منشئ محتوى" data-ru="Елнар Ершат – Видеограф/Content Creator">
+            إلنار إرشات – مصور فيديو/منشئ محتوى
+          </h5>
+          <p data-en="Visual storytelling through video" data-ar="السرد البصري عبر الفيديو" data-ru="Визуальное повествование через видео">
+            السرد البصري عبر الفيديو
+          </p>
+        </div>
+      </div>
+      <!-- Slide 4: شنغيس – متخصص في الذكاء الاصطناعي وتقنية المعلومات -->
+      <div class="team-slide">
+        <div class="team-member">
+          <img src="team/shyn.png" alt="Shyngyss">
+          <h5 data-en="SHYNGYSS – AI/IT Specialist" data-ar="شنغيس – متخصص في الذكاء الاصطناعي وتقنية المعلومات" data-ru="ШЫНГЫС – Специалист по AI/IT">
+            شنغيس – متخصص في الذكاء الاصطناعي وتقنية المعلومات
+          </h5>
+          <p data-en="AI integrations and IT/chatbot development" data-ar="تكامل الذكاء الاصطناعي وتطوير روبوتات الدردشة" data-ru="Внедрение ИИ и разработка IT/chatbot">
+            تكامل الذكاء الاصطناعي وتطوير روبوتات الدردشة
+          </p>
+        </div>
+      </div>
+      <!-- Slide 5: باتيرخان باكبَرْغينولي – منتج محتوى -->
+      <div class="team-slide">
+        <div class="team-member">
+          <img src="team/batyr.png" alt="Batyrkhan Bakbergenuly">
+          <h5 data-en="Batyrkhan Bakbergenuly – Content Producer" data-ar="باتيرخان باكبَرْغينولي – منتج محتوى" data-ru="Батырхан Бакбергенулы – Контент продюсер">
+            باتيرخان باكبَرْغينولي – منتج محتوى
+          </h5>
+          <p data-en="Producing high-quality content" data-ar="إنتاج محتوى عالي الجودة" data-ru="Создание качественного контента">
+            إنتاج محتوى عالي الجودة
+          </p>
+        </div>
+      </div>
+      <!-- Slide 6: فارزة أمتقيزي – متخصصة في وسائل التواصل الاجتماعي -->
+      <div class="team-slide">
+        <div class="team-member">
+          <img src="team/fariza.png" alt="Fariza Ametkyzy">
+          <h5 data-en="Fariza Ametkyzy – SMM Mobilograph" data-ar="فارزة أمتقيزي – متخصصة في وسائل التواصل الاجتماعي" data-ru="Фариза Аметқызы – СММ мобилограф">
+            فارزة أمتقيزي – متخصصة في وسائل التواصل الاجتماعي
+          </h5>
+          <p data-en="Social media strategy & mobile content" data-ar="استراتيجية وسائل التواصل والمحتوى المحمول" data-ru="Стратегия соцсетей и мобильный контент">
+            استراتيجية وسائل التواصل والمحتوى المحمول
+          </p>
+        </div>
+      </div>
+      <!-- Slide 7: قاسنوف أرمَان – المؤسس -->
+      <div class="team-slide">
+        <div class="team-member">
+          <img src="team/arman.png" alt="Kassenov Arman">
+          <h5 data-en="Kassenov Arman – Founder" data-ar="قاسنوف أرمَان – المؤسس" data-ru="Kassenov Arman – Основатель">
+            قاسنوف أرمَان – المؤسس
+          </h5>
+          <p data-en="Establishing vision & strategy" data-ar="تأسيس الرؤية والاستراتيجية" data-ru="Формирование видения и стратегии">
+            تأسيس الرؤية والاستراتيجية
+          </p>
+        </div>
+      </div>
+      <!-- Slide 8: باتيربيك أروجان – مسوق -->
+      <div class="team-slide">
+        <div class="team-member">
+          <img src="team/aru.png" alt="Batyrbek Aruzhan">
+          <h5 data-en="Batyrbek Aruzhan – Marketer" data-ar="باتيربيك أروجان – مسوق" data-ru="Батырбек Аружан – Маркетолог">
+            باتيربيك أروجان – مسوق
+          </h5>
+          <p data-en="Driving growth through marketing" data-ar="دفع النمو من خلال التسويق" data-ru="Увеличение роста через маркетинг">
+            دفع النمو من خلال التسويق
+          </p>
+        </div>
+      </div>
     </div>
-  </section>
+    <button class="slider-btn next">&#10095;</button>
+  </div>
+</section>
 
   <!-- FAQ SECTION -->
   <!-- <section class="faq" id="faq">
@@ -1058,7 +1068,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="social-links">
-      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/provent_agency?igsh=cjlmNTVhYjZzMDdr" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="#" target="_blank"><i class="fab fa-telegram-plane"></i></a>
     </div>
