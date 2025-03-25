@@ -166,6 +166,10 @@
       margin: 0;
       width: 100%;
       text-align: left;
+      padding: 5px;
+      border-radius: 10px;
+      background-color: transparent;
+      border: #0A0A0A 1px;
     }
 
     /* ---------------- BURGER / SIDEBAR ---------------- */
@@ -471,8 +475,9 @@
       -webkit-overflow-scrolling: touch;
     }
     .team-slide {
-      flex: 0 0 300px;
+      flex: 0 0 230px;
       scroll-snap-align: start;
+
     }
     .slider-btn {
       position: absolute;
@@ -1083,22 +1088,31 @@
   <script>
     // === Language Switch Function ===
     function setLang(lang) {
-      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-        el.textContent = el.getAttribute('data-' + lang);
-      });
-      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-      document.documentElement.lang = lang;
-      // Обновляем активное состояние для десктопных кнопок
-      document.querySelectorAll('.lang-switcher-buttons .lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.textContent.trim().toUpperCase() === lang.toUpperCase()) {
-          btn.classList.add('active');
-        }
-        if (lang === 'ar' && btn.textContent.includes('عربي')) {
-          btn.classList.add('active');
-        }
-      });
+    // Обновление текста для всех элементов с data-атрибутами
+    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+      el.textContent = el.getAttribute('data-' + lang);
+    });
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = lang;
+    
+    // Обновление активного состояния для десктопных кнопок
+    document.querySelectorAll('.lang-switcher-buttons .lang-btn').forEach(btn => {
+      btn.classList.remove('active');
+      if (btn.textContent.trim().toUpperCase() === lang.toUpperCase()) {
+        btn.classList.add('active');
+      }
+      if (lang === 'ar' && btn.textContent.includes('عربي')) {
+        btn.classList.add('active');
+      }
+    });
+
+    // Обновление текста на кнопке dropdown в мобильном хедере
+    const dropdownToggle = document.querySelector('.lang-switcher-dropdown .dropdown-toggle');
+    if (dropdownToggle) {
+      // Если выбран арабский, отображаем "عربي", иначе текст в верхнем регистре
+      dropdownToggle.textContent = lang === 'ar' ? 'عربي' : lang.toUpperCase();
     }
+  }
 
     // === Dropdown Toggle for Mobile Language Switcher ===
     function toggleDropdown() {
